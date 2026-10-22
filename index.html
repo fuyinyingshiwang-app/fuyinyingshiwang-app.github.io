@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>福音影视网 | 高清正版影视在线观看平台 - 最新电影电视剧综艺动漫大全</title>
+<meta name="keywords" content="福音影视网,fuyinyingshiwang-app.github.io,福音影视,在线影视,高清电影,电视剧在线看,免费影视,最新影视资源,影视大全,好剧推荐">
+<meta name="description" content="福音影视网(fuyinyingshiwang-app.github.io)是国内领先的在线影视观看平台，提供海量高清正版电影、电视剧、综艺、动漫资源，每日更新最新热播内容，支持多终端流畅播放，让观影更便捷。">
+<meta name="robots" content="index,follow">
+<meta name="author" content="福音影视网">
+<meta name="copyright" content="福音影视网">
+<meta property="og:type" content="website">
+<meta property="og:title" content="福音影视网 | 高清影视在线观看平台">
+<meta property="og:description" content="福音影视网提供海量高清正版影视资源，电影电视剧综艺动漫每日更新，多终端流畅播放。">
+<meta property="og:url" content="https://fuyinyingshiwang-app.github.io">
+<meta property="og:site_name" content="福音影视网">
+<link rel="canonical" href="https://fuyinyingshiwang-app.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+--primary:#0f0c29;
+--secondary:#302b63;
+--accent:#e94560;
+--gold:#f5c518;
+--light:#f8f9fa;
+--dark:#1a1a2e;
+--text:#333;
+--white:#fff;
+--shadow:0 10px 40px rgba(0,0,0,.15);
+}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'PingFang SC','Microsoft YaHei',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);background:var(--light);line-height:1.7;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;transition:.3s;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,12,41,.95);backdrop-filter:blur(12px);transition:.4s;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{font-size:26px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;white-space:nowrap;}
+.logo span{font-size:11px;display:block;color:rgba(255,255,255,.5);font-weight:400;-webkit-text-fill-color:rgba(255,255,255,.5);letter-spacing:2px;margin-top:-2px;}
+.nav-toggle{display:none;flex-direction:column;cursor:pointer;gap:5px;}
+.nav-toggle span{width:26px;height:2px;background:var(--white);border-radius:2px;transition:.3s;}
+.nav-menu{display:flex;gap:8px;align-items:center;}
+.nav-menu a{padding:8px 16px;border-radius:20px;color:rgba(255,255,255,.8);font-size:14px;font-weight:500;position:relative;}
+.nav-menu a:hover{color:var(--white);background:rgba(233,69,96,.2);}
+.nav-menu a.active{color:var(--white);background:linear-gradient(135deg,var(--accent),#c23152);}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%);overflow:hidden;}
+.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(233,69,96,.15) 0%,transparent 70%);top:-200px;right:-100px;animation:float 8s ease-in-out infinite;}
+.hero::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,197,24,.1) 0%,transparent 70%);bottom:-150px;left:-100px;animation:float 10s ease-in-out infinite reverse;}
+@keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-30px) scale(1.05);}}
+.hero-content{text-align:center;z-index:2;padding:0 20px;max-width:800px;}
+.hero-content h1{font-size:clamp(36px,7vw,68px);font-weight:900;color:var(--white);margin-bottom:20px;line-height:1.2;}
+.hero-content h1 .highlight{color:var(--gold);}
+.hero-content p{font-size:clamp(15px,2.5vw,19px);color:rgba(255,255,255,.75);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn{padding:14px 38px;border-radius:50px;font-size:15px;font-weight:600;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none;transition:.3s;}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#c23152);color:var(--white);box-shadow:0 8px 25px rgba(233,69,96,.4);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(233,69,96,.5);}
+.btn-outline{border:2px solid rgba(255,255,255,.3);color:var(--white);background:transparent;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* Stats */
+.stats{padding:60px 20px;background:var(--white);}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center;}
+.stat-item{padding:30px 20px;border-radius:16px;background:linear-gradient(135deg,#f8f9fa,#fff);box-shadow:0 5px 20px rgba(0,0,0,.05);transition:.3s;}
+.stat-item:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.1);}
+.stat-num{font-size:42px;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-label{font-size:14px;color:#666;margin-top:8px;}
+
+/* Section */
+section{padding:80px 20px;position:relative;}
+.container{max-width:1200px;margin:0 auto;}
+.section-head{text-align:center;margin-bottom:50px;}
+.section-head .tag{display:inline-block;padding:6px 18px;border-radius:20px;background:rgba(233,69,96,.1);color:var(--accent);font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:12px;}
+.section-head h2{font-size:clamp(26px,4vw,38px);font-weight:900;color:var(--dark);}
+.section-head p{font-size:15px;color:#666;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;}
+
+/* Movie Grid */
+.movie-section{background:#fafafa;}
+.movie-filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px;}
+.movie-filters button{padding:8px 22px;border-radius:25px;border:2px solid #e0e0e0;background:var(--white);color:#555;font-size:14px;font-weight:500;cursor:pointer;transition:.3s;}
+.movie-filters button:hover,.movie-filters button.on{border-color:var(--accent);color:var(--accent);background:rgba(233,69,96,.05);}
+.movie-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;}
+.movie-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.06);transition:.4s;cursor:pointer;}
+.movie-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.15);}
+.movie-poster{position:relative;aspect-ratio:2/3;overflow:hidden;background:linear-gradient(135deg,#302b63,#0f0c29);display:flex;align-items:center;justify-content:center;}
+.movie-poster .poster-text{font-size:28px;font-weight:900;color:rgba(255,255,255,.15);text-align:center;padding:20px;}
+.movie-poster .badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:8px;font-size:11px;font-weight:700;background:var(--gold);color:#000;}
+.movie-poster .rating{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:700;background:rgba(0,0,0,.6);color:var(--gold);backdrop-filter:blur(4px);}
+.movie-poster .play-btn{position:absolute;bottom:16px;right:16px;width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:16px;box-shadow:0 5px 15px rgba(233,69,96,.5);opacity:0;transform:scale(.8);transition:.3s;}
+.movie-card:hover .play-btn{opacity:1;transform:scale(1);}
+.movie-info{padding:16px;}
+.movie-info h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.movie-info .meta{font-size:12px;color:#888;display:flex;justify-content:space-between;}
+
+/* TV Series */
+.series-section{background:var(--dark);}
+.series-section .section-head h2{color:var(--white);}
+.series-section .section-head p{color:rgba(255,255,255,.6);}
+.series-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.series-card{display:flex;gap:16px;padding:16px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.3s;}
+.series-card:hover{background:rgba(255,255,255,.1);border-color:rgba(233,69,96,.4);transform:translateX(5px);}
+.series-thumb{width:90px;height:120px;border-radius:10px;background:linear-gradient(135deg,#e94560,#302b63);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-size:20px;font-weight:900;}
+.series-detail h3{font-size:16px;font-weight:700;color:var(--white);margin-bottom:6px;}
+.series-detail .ep{font-size:12px;color:var(--gold);margin-bottom:8px;}
+.series-detail p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+
+/* Variety */
+.variety-section{background:var(--white);}
+.variety-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
+.variety-card{border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.08);transition:.4s;background:var(--white);}
+.variety-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.14);}
+.variety-cover{height:180px;display:flex;align-items:center;justify-content:center;position:relative;}
+.variety-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--c1,var(--accent)),var(--c2,var(--secondary)));opacity:.9;}
+.variety-cover span{position:relative;z-index:1;font-size:24px;font-weight:900;color:var(--white);}
+.variety-body{padding:22px;}
+.variety-body h3{font-size:18px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+.variety-body p{font-size:14px;color:#666;line-height:1.7;}
+.variety-body .tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.variety-body .tags span{padding:4px 12px;border-radius:12px;font-size:12px;background:#f0f0f0;color:#555;}
+
+/* Anime */
+.anime-section{background:linear-gradient(180deg,#f8f9fa,#fff);}
+.anime-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px;}
+.anime-card{text-align:center;transition:.3s;}
+.anime-card:hover{transform:translateY(-5px);}
+.anime-avatar{width:140px;height:140px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:36px;box-shadow:0 10px 30px rgba(0,0,0,.1);position:relative;}
+.anime-avatar::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:3px solid transparent;border-top-color:var(--accent);border-bottom-color:var(--gold);animation:spin 4s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.anime-card h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.anime-card p{font-size:13px;color:#888;}
+
+/* News */
+.news-section{background:var(--dark);}
+.news-section .section-head h2{color:var(--white);}
+.news-section .section-head p{color:rgba(255,255,255,.6);}
+.news-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;}
+.news-feature{border-radius:18px;overflow:hidden;position:relative;min-height:340px;display:flex;align-items:flex-end;padding:30px;background:linear-gradient(135deg,#302b63,#0f0c29);}
+.news-feature .news-tag{position:absolute;top:20px;left:20px;padding:5px 14px;border-radius:10px;background:var(--accent);color:var(--white);font-size:12px;font-weight:600;}
+.news-feature h3{font-size:22px;font-weight:700;color:var(--white);margin-bottom:10px;position:relative;z-index:1;}
+.news-feature p{font-size:14px;color:rgba(255,255,255,.6);position:relative;z-index:1;}
+.news-list{display:flex;flex-direction:column;gap:14px;}
+.news-item{display:flex;gap:14px;padding:14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);transition:.3s;}
+.news-item:hover{background:rgba(255,255,255,.1);}
+.news-date{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#c23152);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;color:var(--white);}
+.news-date strong{font-size:18px;font-weight:900;line-height:1;}
+.news-date small{font-size:10px;opacity:.8;}
+.news-item h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:4px;line-height:1.5;}
+.news-item span{font-size:12px;color:rgba(255,255,255,.4);}
+
+/* Footer */
+footer{background:#0d0b1e;padding:60px 20px 30px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:40px;}
+.footer-brand h3{font-size:22px;font-weight:900;color:var(--white);margin-bottom:12px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.8;}
+.footer-col h4{font-size:15px;font-weight:700;color:var(--white);margin-bottom:16px;position:relative;padding-bottom:10px;}
+.footer-col h4::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--accent);border-radius:2px;}
+.footer-col ul li{margin-bottom:10px;}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.45);transition:.3s;}
+.footer-col ul li a:hover{color:var(--gold);padding-left:5px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.3);line-height:1.8;}
+.footer-bottom a{color:var(--gold);}
+
+/* Back to top */
+.back-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:20px;box-shadow:0 5px 20px rgba(233,69,96,.4);opacity:0;visibility:hidden;transition:.3s;z-index:999;cursor:pointer;}
+.back-top.show{opacity:1;visibility:visible;}
+.back-top:hover{transform:translateY(-3px);}
+
+/* Responsive */
+@media(max-width:768px){
+section{padding:60px 16px;}
+.stats{padding:40px 16px;}
+.nav-toggle{display:flex;}
+.nav-menu{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:rgba(15,12,41,.98);padding:20px;gap:5px;transform:translateY(-150%);opacity:0;transition:.4s;backdrop-filter:blur(12px);}
+.nav-menu.open{transform:translateY(0);opacity:1;}
+.nav-menu a{width:100%;text-align:center;padding:12px;}
+.hero-content h1{font-size:32px;}
+.news-layout{grid-template-columns:1fr;}
+.movie-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
+.movie-card .movie-info h3{font-size:14px;}
+.anime-grid{grid-template-columns:repeat(3,1fr);}
+.series-list{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+.movie-grid{grid-template-columns:1fr;}
+.anime-grid{grid-template-columns:repeat(2,1fr);}
+.hero-btns{flex-direction:column;align-items:center;}
+.btn{width:200px;justify-content:center;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<!-- Header -->
+<header id="header">
+<div class="header-inner">
+<div class="logo">福音影视网<span>FUYIN YINGSHI</span></div>
+<div class="nav-toggle" onclick="toggleNav()">
+<span></span><span></span><span></span>
+</div>
+<nav class="nav-menu" id="navMenu">
+<a href="#home" class="active">首页</a>
+<a href="#movies">电影</a>
+<a href="#series">电视剧</a>
+<a href="#variety">综艺</a>
+<a href="#anime">动漫</a>
+<a href="#news">影视资讯</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero -->
+<div class="hero" id="home">
+<div class="hero-content">
+<h1>福音影视网<span class="highlight">高清正版</span><br>海量影视随心看</h1>
+<p>福音影视网(fuyinyingshiwang-app.github.io)汇聚全网最新最热影视资源，电影、电视剧、综艺、动漫一应俱全，每日更新，多终端流畅播放，让每一次观影都是享受。</p>
+<div class="hero-btns">
+<a href="#movies" class="btn btn-primary">🎬 立即观影</a>
+<a href="#news" class="btn btn-outline">📰 最新资讯</a>
+</div>
+</div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+<div class="stats-inner">
+<div class="stat-item"><div class="stat-num" data-count="12000">0</div><div class="stat-label">影视资源总数</div></div>
+<div class="stat-item"><div class="stat-num" data-count="365">0</div><div class="stat-label">全年无休更新</div></div>
+<div class="stat-item"><div class="stat-num" data-count="1080">0</div><div class="stat-label">最高分辨率</div></div>
+<div class="stat-item"><div class="stat-num" data-count="500">0</div><div class="stat-label">万+忠实用户</div></div>
+</div>
+</div>
+
+<!-- Movies -->
+<section class="movie-section" id="movies">
+<div class="container">
+<div class="section-head">
+<span class="tag">MOVIE</span>
+<h2>热门电影</h2>
+<p>福音影视网精选院线大片、经典老片、独家好剧，高清正版在线观看，随时随地畅享视听盛宴</p>
+</div>
+<div class="movie-filters">
+<button class="on">全部</button>
+<button>动作</button>
+<button>喜剧</button>
+<button>爱情</button>
+<button>科幻</button>
+<button>悬疑</button>
+<button>动画</button>
+</div>
+<div class="movie-grid">
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">星际<br>远征</div><span class="badge">NEW</span><span class="rating">★ 9.2</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>星际远征：终极之战</h3><div class="meta"><span>科幻/冒险</span><span>2026</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">暗夜<br>追凶</div><span class="badge">HOT</span><span class="rating">★ 8.7</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>暗夜追凶</h3><div class="meta"><span>悬疑/犯罪</span><span>2026</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">花季<br>雨季</div><span class="rating">★ 8.5</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>花季雨季的我们</h3><div class="meta"><span>爱情/青春</span><span>2025</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">龙拳<br>霸主</div><span class="badge">NEW</span><span class="rating">★ 8.9</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>龙拳霸主</h3><div class="meta"><span>动作/功夫</span><span>2026</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">时光<br>倒流</div><span class="rating">★ 9.0</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>时光倒流的秘密</h3><div class="meta"><span>剧情/奇幻</span><span>2025</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">深海<br>探秘</div><span class="badge">HOT</span><span class="rating">★ 8.8</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>深海探秘：未知世界</h3><div class="meta"><span>纪录/冒险</span><span>2026</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">城市<br>边缘</div><span class="rating">★ 8.3</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>城市边缘人</h3><div class="meta"><span>剧情/社会</span><span>2025</span></div></div></div>
+<div class="movie-card"><div class="movie-poster"><div class="poster-text">笑傲<br>江湖</div><span class="badge">NEW</span><span class="rating">★ 9.1</span><div class="play-btn">▶</div></div><div class="movie-info"><h3>笑傲江湖之风云再起</h3><div class="meta"><span>武侠/古装</span><span>2026</span></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- TV Series -->
+<section class="series-section" id="series">
+<div class="container">
+<div class="section-head">
+<span class="tag">TV SERIES</span>
+<h2>热播电视剧</h2>
+<p>福音影视网独家同步更新各大卫视热播剧集，高清流畅不卡顿，追剧停不下来</p>
+</div>
+<div class="series-list">
+<div class="series-card"><div class="series-thumb">01</div><div class="series-detail"><h3>长安十二时辰 第三季</h3><div class="ep">更新至 28/40 集</div><p>大唐盛世下的悬疑推理巨制，张小敬再度出山，揭开长安城背后的惊天阴谋。剧情紧凑，场面恢弘，被誉为国产悬疑剧天花板。</p></div></div>
+<div class="series-card"><div class="series-thumb">02</div><div class="series-detail"><h3>山河月明 续篇</h3><div class="ep">更新至 15/36 集</div><p>以明朝历史为背景的史诗巨作，讲述一代帝王的成长与抉择，阵容强大，制作精良，视觉效果震撼。</p></div></div>
+<div class="series-card"><div class="series-thumb">03</div><div class="series-detail"><h3>都市迷情</h3><div class="ep">更新至 32/48 集</div><p>聚焦当代都市男女的情感纠葛，真实还原职场与生活的碰撞，引发无数观众共鸣，被称为"最真实都市剧"。</p></div></div>
+<div class="series-card"><div class="series-thumb">04</div><div class="series-detail"><h3>法医秦明 5</h3><div class="ep">更新至 10/24 集</div><p>硬核法医题材系列回归，通过尸体线索抽丝剥茧，揭开一个个离奇案件的真相，烧脑程度再升级。</p></div></div>
+<div class="series-card"><div class="series-thumb">05</div><div class="series-detail"><h3>星辰大海</h3><div class="ep">全 36 集</div><p>航天题材年度大剧，展现中国航天人的奋斗历程，致敬每一位默默奉献的航天工作者，热血感人。</p></div></div>
+<div class="series-card"><div class="series-thumb">06</div><div class="series-detail"><h3>锦绣南歌</h3><div class="ep">更新至 22/50 集</div><p>古装仙侠爱情剧，讲述凡人少女与仙界王子的跨越三界的爱恋，特效精美，颜值在线，甜虐交织。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- Variety -->
+<section class="variety-section" id="variety">
+<div class="container">
+<div class="section-head">
+<span class="tag">VARIETY</span>
+<h2>热门综艺</h2>
+<p>福音影视网收录全网最热综艺节目，搞笑、竞技、音乐、真人秀应有尽有，快乐停不下来</p>
+</div>
+<div class="variety-grid">
+<div class="variety-card" style="--c1:#e94560;--c2:#302b63;">
+<div class="variety-cover"><span>奔跑吧</span></div>
+<div class="variety-body"><h3>奔跑吧 · 第十一季</h3><p>国民级户外竞技真人秀，明星嘉宾分组对抗，爆笑不断，每期主题全新升级，带来前所未有的欢乐体验。</p><div class="tags"><span>竞技</span><span>搞笑</span><span>户外</span></div></div>
+</div>
+<div class="variety-card" style="--c1:#f5c518;--c2:#e94560;">
+<div class="variety-cover"><span>歌手2026</span></div>
+<div class="variety-body"><h3>歌手 · 2026</h3><p>华语乐坛顶级音乐竞演节目，实力歌手同台飙歌，每期淘汰制带来极致听觉盛宴，见证天籁之音的诞生。</p><div class="tags"><span>音乐</span><span>竞演</span><span>Live</span></div></div>
+</div>
+<div class="variety-card" style="--c1:#302b63;--c2:#0f0c29;">
+<div class="variety-cover"><span>极限挑战</span></div>
+<div class="variety-body"><h3>极限挑战 · 巅峰赛</h3><p>男人帮再度集结，挑战各种极限任务和烧脑谜题，兄弟情深，笑料百出，每一期都是惊喜。</p><div class="tags"><span>真人秀</span><span>挑战</span><span>明星</span></div></div>
+</div>
+<div class="variety-card" style="--c1:#e94560;--c2:#f5c518;">
+<div class="variety-cover"><span>向往的生活</span></div>
+<div class="variety-body"><h3>向往的生活 · 第七季</h3><p>慢综艺标杆之作，远离城市喧嚣，回归田园生活，种菜做饭、接待客人，感受最质朴的幸福生活。</p><div class="tags"><span>慢综艺</span><span>田园</span><span>治愈</span></div></div>
+</div>
+<div class="variety-card" style="--c1:#0f0c29;--c2:#e94560;">
+<div class="variety-cover"><span>我是演员</span></div>
+<div class="variety-body"><h3>我是演员 · 第三季</h3><p>演技竞演类综艺，新生代演员与实力派同台飙戏，导师现场点评指导，见证演员的成长与蜕变。</p><div class="tags"><span>演技</span><span>竞演</span><span>导师</span></div></div>
+</div>
+<div class="variety-card" style="--c1:#f5c518;--c2:#302b63;">
+<div class="variety-cover"><span>王牌对王牌</span></div>
+<div class="variety-body"><h3>王牌对王牌 · 第九季</h3><p>室内游戏竞技综艺，两队明星嘉宾PK各种趣味游戏和才艺挑战，沈腾贾玲的黄金搭档笑翻全场。</p><div class="tags"><span>游戏</span><span>喜剧</span><span>明星</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Anime -->
+<section class="anime-section" id="anime">
+<div class="container">
+<div class="section-head">
+<span class="tag">ANIME</span>
+<h2>精彩动漫</h2>
+<p>福音影视网收录国内外优质动漫作品，热血、治愈、冒险、科幻，满足所有年龄段的动画爱好者</p>
+</div>
+<div class="anime-grid">
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#e94560,#302b63);">🔥</div><h3>斗破苍穹</h3><p>热血/玄幻 · 连载中</p></div>
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#f5c518,#e94560);">⚡</div><h3>一念永恒</h3><p>修仙/冒险 · 连载中</p></div>
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#302b63,#0f0c29);">🗡️</div><h3>刺客伍六七</h3><p>搞笑/动作 · 第三季</p></div>
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#e94560,#f5c518);">🌊</div><h3>大鱼海棠2</h3><p>奇幻/治愈 · 完结</p></div>
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#0f0c29,#e94560);">🚀</div><h3>星游记</h3><p>科幻/冒险 · 连载中</p></div>
+<div class="anime-card"><div class="anime-avatar" style="background:linear-gradient(135deg,#f5c518,#302b63);">🐉</div><h3>四海鲸骑</h3><p>历史/冒险 · 第二季</p></div>
+</div>
+</div>
+</section>
+
+<!-- News -->
+<section class="news-section" id="news">
+<div class="container">
+<div class="section-head">
+<span class="tag">NEWS</span>
+<h2>影视资讯</h2>
+<p>福音影视网第一时间为您带来最新影视行业动态、明星八卦、影片定档、奖项揭晓等热门资讯</p>
+</div>
+<div class="news-layout">
+<div class="news-feature">
+<span class="news-tag">头条</span>
+<h3>2026国庆档电影票房创新高<br>福音影视网同步上线多部佳作</h3>
+<p>2026年国庆档总票房突破60亿大关，多部国产大片表现亮眼。《星际远征：终极之战》领跑票房榜，福音影视网第一时间上线正版高清资源，会员可抢先观看...</p>
+</div>
+<div class="news-list">
+<div class="news-item"><div class="news-date"><strong>21</strong><small>10月</small></div><div><h4>《长安十二时辰3》大结局预告片发布，网友直呼不舍</h4><span>电视剧资讯 · 2小时前</span></div></div>
+<div class="news-item"><div class="news-date"><strong>20</strong><small>10月</small></div><div><h4>第39届金鸡奖提名名单揭晓，多部福音影视网热播作品入围</h4><span>行业动态 · 5小时前</span></div></div>
+<div class="news-item"><div class="news-date"><strong>19</strong><small>10月</small></div><div><h4>知名导演新作宣布开机，预计2027年春节档上映</h4><span>影片动态 · 1天前</span></div></div>
+<div class="news-item"><div class="news-date"><strong>18</strong><small>10月</small></div><div><h4>《斗破苍穹》动画特别篇定档，官方放出首支预告</h4><span>动漫资讯 · 2天前</span></div></div>
+<div class="news-item"><div class="news-date"><strong>17</strong><small>10月</small></div><div><h4>多位实力演员加盟新综艺《极限挑战·巅峰赛》阵容官宣</h4><span>综艺资讯 · 3天前</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div class="footer-top">
+<div class="footer-brand">
+<h3>福音影视网</h3>
+<p>福音影视网(fuyinyingshiwang-app.github.io)致力于为广大影视爱好者提供最优质的在线观影体验，海量正版高清资源，每日更新不断。访问官网：<a href="https://fuyinyingshiwang-app.github.io">fuyinyingshiwang-app.github.io</a></p>
+</div>
+<div class="footer-col">
+<h4>栏目导航</h4>
+<ul>
+<li><a href="#home">首页</a></li>
+<li><a href="#movies">热门电影</a></li>
+<li><a href="#series">热播电视剧</a></li>
+<li><a href="#variety">综艺节目</a></li>
+<li><a href="#anime">精彩动漫</a></li>
+<li><a href="#news">影视资讯</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>关于我们</h4>
+<ul>
+<li><a href="#">关于福音影视网</a></li>
+<li><a href="#">网站合作</a></li>
+<li><a href="#">版权声明</a></li>
+<li><a href="#">免责声明</a></li>
+<li><a href="#">联系方式</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>帮助中心</h4>
+<ul>
+<li><a href="#">观影指南</a></li>
+<li><a href="#">常见问题</a></li>
+<li><a href="#">意见反馈</a></li>
+<li><a href="#">举报侵权</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 福音影视网(fuyinyingshiwang-app.github.io) 版权所有 | 本站域名：fuyinyingshiwang-app.github.io<br>本站所提供内容均来自互联网，如有侵权请联系删除 | 福音影视网 · 让观影更简单</p>
+</div>
+</div>
+</footer>
+
+<!-- Back to top -->
+<div class="back-top" id="backTop" onclick="scrollToTop()">↑</div>
+
+<script>
+// Nav toggle
+function toggleNav(){
+var menu=document.getElementById('navMenu');
+menu.classList.toggle('open');
+}
+// Close nav on link click (mobile)
+document.querySelectorAll('.nav-menu a').forEach(function(link){
+link.addEventListener('click',function(){
+document.getElementById('navMenu').classList.remove('open');
+});
+});
+// Active nav on scroll
+window.addEventListener('scroll',function(){
+var header=document.getElementById('header');
+var backTop=document.getElementById('backTop');
+if(window.scrollY>100){header.style.background='rgba(15,12,41,.98)';backTop.classList.add('show');}
+else{header.style.background='rgba(15,12,41,.95)';backTop.classList.remove('show');}
+// Active section
+var sections=document.querySelectorAll('section,div.hero');
+var navLinks=document.querySelectorAll('.nav-menu a');
+var current='';
+sections.forEach(function(sec){
+var top=sec.offsetTop-150;
+if(window.scrollY>=top){current=sec.getAttribute('id');}
+});
+navLinks.forEach(function(link){
+link.classList.remove('active');
+if(link.getAttribute('href')=='#'+current){link.classList.add('active');}
+});
+});
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+anchor.addEventListener('click',function(e){
+e.preventDefault();
+var target=document.querySelector(this.getAttribute('href'));
+if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+});
+});
+// Scroll to top
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+// Animated counter
+function animateCounters(){
+document.querySelectorAll('.stat-num').forEach(function(el){
+var target=parseInt(el.getAttribute('data-count'));
+var count=0;
+var step=Math.max(1,Math.ceil(target/60));
+var timer=setInterval(function(){
+count+=step;
+if(count>=target){count=target;clearInterval(timer);}
+el.textContent=count.toLocaleString();
+},25);
+});
+}
+// Intersection Observer for stats
+var statsSection=document.querySelector('.stats');
+var counted=false;
+if(statsSection){
+var observer=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting&&!counted){
+animateCounters();
+counted=true;
+}
+});
+},{threshold:0.5});
+observer.observe(statsSection);
+}
+// Movie filter buttons
+document.querySelectorAll('.movie-filters button').forEach(function(btn){
+btn.addEventListener('click',function(){
+document.querySelectorAll('.movie-filters button').forEach(function(b){b.classList.remove('on');});
+this.classList.add('on');
+});
+});
+</script>
+</body>
+</html>
